@@ -10,20 +10,21 @@
 ###############
 # Variables   #
 ###############
-name="$USER"
-date=$(date +'%I:%M %p')
+title="Overlord"
 hostname=$(hostname)
+date=$(date +'%I:%M %p')
 weekday=$(date +%u)
 ###############
 # Main        #
 ###############
-cat <<EOF
-Welcome to planet $hostname, $name!
-EOF
+#cat <<EOF
+cowsay "Welcome to planet $hostname, "$title $USER!""
 if [ "$weekday" = "6" ] || [ "$weekday" = "7" ]
 then
 
      echo "It is $date on Weekend."
+
    else
         echo "It is $date on Weekday."
+
       fi
